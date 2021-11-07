@@ -59,10 +59,10 @@ func New(config ...Config) fiber.Handler {
 	// Return new handler
 	return func(c *fiber.Ctx) error {
 		// Only cache GET methods
-		if c.Method() != fiber.MethodGet {
-			c.Set(cfg.CacheHeader, cacheUnreachable)
-			return c.Next()
-		}
+		//if c.Method() != fiber.MethodGet {
+		//	c.Set(cfg.CacheHeader, cacheUnreachable)
+		//	return c.Next()
+		//}
 
 		// Get key from request
 		key := cfg.KeyGenerator(c)
